@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="style/login_sign_in.css">
+</head>
+
+<body>
+    <div class="flex-body">
+        <div class="kolom-logo">
+            <img src="images/LOGO_T_FOR_THOMAS-removebg-preview.png" alt="">
+            <h1>Universitas Teweh City</h1>
+        </div>
+        <div class="kolom-input">
+            <div class="container">
+                <h1>SIGN IN</h1>
+                <form method="post">
+                    <!-- <label for="username">Username (Maksimal 7 Karakter):</label> -->
+                    <input type="text" name="username" id="username" placeholder="Enter Your Username" autofocus
+                        required>
+
+                    <br>
+                    <input type="email" name="email" id="username" placeholder="Enter Your Email" autofocus required>
+
+                    <br>
+                    <!-- <label for="password">Password (Minimal 10 Karakter, Harus terdiri dari huruf kapital, huruf kecil, angka, dan karakter khusus):</label> -->
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+                    <!-- <input type="button" name="show" id="show" class="mt-1 mb-6 text-right cursor-pointer" value="Show"> -->
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="show" value="Show">
+                        <p>Show Password</p>
+                    </div>
+
+                    <br>
+                    <div class="button-link">
+                        <button name="submit">Sign In</button>
+                        <a href="login.html">Login</a>
+                    </div>
+                    <!-- <input type="submit" name="submit" value="LOGIN"> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const show = document.getElementById('show');
+        const pass = document.getElementById('password');
+
+        show.addEventListener('click', () => {
+            if (show.value === "Show") {
+                show.value = 'Hide';
+                pass.setAttribute('type', 'text');
+            } else {
+                show.value = 'Show';
+                pass.setAttribute('type', 'password');
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* border: 1px solid blue; */
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-light: #f0eff5;
+  --color-gray-light: #86848c;
+  --color-gray-dark: #56555e;
+  --color-black: #27282f;
+  --box-shadow-black: rgba(0, 0, 0, 0.1);
+  --box-shadow-white: rgba(255, 255, 255, 0.1);
+
+  --color-gray-light--white: #f0eff5;
+  --color-black--gray-dark: #27282f;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(220, 220, 220);
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  column-gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 10px 15px;
+
+  /* border: 1px solid red; */
+}
+
+nav h1 {
+  font-size: 30px;
+}
+
+nav div {
+  font-size: 30px;
+  text-decoration: none;
+  color: blue;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+
+  /* border: 1px solid blue; */
+}
+
+nav div:hover {
+  color: white;
+  background-color: blue;
+  transform: scale(1.05);
+}
+
+nav div[class="profile"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  column-gap: 5px;
+}
+
+nav div[class="profile"]:hover {
+  color: white;
+  background-color: black;
+}
+
+nav div[class="profile"] i,
+nav div[class="profile"] h1 {
+  font-size: 6px;
+}
+
+/* FITUR PROFILE */
+#profile {
+  background-color: var(--color-light);
+  position: absolute;
+  height: 70px;
+  width: 150px;
+  right: 20px;
+  top: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px var(--box-shadow-black);
+  padding: 5px;
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+#profile .icon {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+}
+
+#profile .icon .icon-close {
+  padding: 2px 4px;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+}
+
+#profile .icon .icon-close:hover {
+  background-color: aqua;
+  transform: scale(1.05);
+}
+
+#profile .icon .icon-close:hover i {
+  color: white;
+  transform: scale(1.05);
+}
+
+#profile button[name="logout"] {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  display: flex;
+  width: 130px;
+  column-gap: 10px;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 10px;
+}
+
+#profile button[name="logout"]:hover {
+  background-color: var(--color-gray-dark);
+  transform: scale(1.05);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 60px 80px;
+}
+
+main .container {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tambah-search {
+  display: flex;
+  column-gap: 240px;
+}
+
+.tambah-search input:focus {
+  outline: none;
+}
+
+.tambah-search input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+/* HALAMAN DATA MAHASISWA (GRAFIK) */
+
+#page-data-mahasiswa {
+  padding: 20px;
+}
+
+#page-data-mahasiswa h1 {
+  padding: 20px 0;
+}
+
+#page-data-mahasiswa canvas#myChart {
+  height: 299px;
+  width: 600px;
+  padding: 20px;
+}
+
+/* HALAMAN MAHASISWA, MATAKULIAH, DAN NILAI */
+
+#page-mahasiswa,
+#page-matakuliah,
+#page-nilai {
+  padding: 20px;
+}
+
+#page-mahasiswa .title,
+#page-matakuliah .title,
+#page-nilai .title {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+#page-mahasiswa .title div,
+#page-matakuliah .title div,
+#page-nilai .title div {
+  font-size: 30px;
+  cursor: pointer;
+  color: blue;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+#page-mahasiswa .title div:hover,
+#page-matakuliah .title div:hover,
+#page-nilai .title div:hover {
+  transform: scale(1.05);
+  color: white;
+  background-color: blue;
+}
+
+/* #page-mahasiswa .title div[href="../menu.php"]:hover,
+#page-matakuliah .title div[href="../menu.php"]:hover,
+#page-nilai .title div[href="../menu.php"]:hover {
+  transform: scale(1.05);
+} */
+
+#page-mahasiswa a[href="Tabel_Mahasiswa/tambah.php"],
+#page-matakuliah a[href="Tabel_Matakuliah/tambah.php"],
+#page-nilai a[href="Tabel_Nilai/tambah.php"] {
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 191, 0);
+  color: white;
+  width: 105px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#page-mahasiswa a[href="Tabel_Mahasiswa/tambah.php"]:hover,
+#page-matakuliah a[href="Tabel_Matakuliah/tambah.php"]:hover,
+#page-nilai a[href="Tabel_Nilai/tambah.php"]:hover {
+  transform: scale(1.05);
+}
+
+#page-mahasiswa a[href="Tabel_Mahasiswa/tambah.php"] i,
+#page-matakuliah a[href="Tabel_Matakuliah/tambah.php"] i,
+#page-nilai a[href="Tabel_Nilai/tambah.php"] i {
+  font-size: 12px;
+  padding: 5px;
+}
+
+table tr th,
+table tr td {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+table tr th {
+  background-color: rgb(209, 255, 209);
+}
+
+table tr .aksi {
+  display: flex;
+  column-gap: 10px;
+}
+
+table tr .aksi i {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+table tr .aksi i:hover {
+  transform: scale(1.05);
+}
+
+table tr .aksi i[class="fa-solid fa-pen-to-square"] {
+  background-color: green;
+}
+
+table tr .aksi i[class="fa-regular fa-trash-can"] {
+  background-color: red;
+}
+
+/* - - - (KHUSUS UNTUK HALAMAN FUNCTION DAN VIEW) */
+.table {
+  margin-top: 30px;
+}
+
+.table h2 {
+  margin: 0 0 10px 0;
+}

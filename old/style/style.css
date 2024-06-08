@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* border: 1px solid blue; */
+}
+
+body {
+  margin: 20px;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container .title {
+  display: flex;
+  column-gap: 20px;
+}
+
+.container .title a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.container .title a[href="../menu.php"]:hover {
+  transform: scale(1.05);
+}
+
+.container a[href="tambah.php"] {
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 191, 0);
+  color: white;
+  width: 105px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.container a[href="tambah.php"]:hover {
+  transform: scale(1.05);
+}
+
+.container a[href="tambah.php"] i {
+  font-size: 12px;
+  padding: 5px;
+}
+
+table tr th,
+table tr td {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+table tr th {
+  background-color: rgb(209, 255, 209);
+}
+
+table tr .aksi {
+  display: flex;
+  column-gap: 10px;
+}
+
+table tr .aksi i {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+table tr .aksi i:hover {
+  transform: scale(1.05);
+}
+
+table tr .aksi i[class="fa-solid fa-pen-to-square"] {
+  background-color: green;
+}
+
+table tr .aksi i[class="fa-regular fa-trash-can"] {
+  background-color: red;
+}
+
+/* - - - (KHUSUS UNTUK HALAMAN FUNCTION DAN VIEW) */
+.table {
+  margin-top: 30px;
+}
+
+.table h2 {
+  margin: 0 0 10px 0;
+}
